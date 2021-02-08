@@ -1,23 +1,23 @@
 import 'dart:math';
 
 import 'package:animation_example/app/app.dart';
-import 'package:animation_example/screens/secondScreen.dart';
+import 'package:animation_example/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget{
+class SecondScreen extends StatefulWidget{
 
     static Route<dynamic> route() {
     return MaterialPageRoute(
-      builder: (context) => HomeScreen(),
+      builder: (context) => SecondScreen(),
     );
   }
   
   @override
-  HomeScreenState createState() => HomeScreenState();
+  SecondScreenState createState() => SecondScreenState();
 
 }
 
-class HomeScreenState extends State<HomeScreen>{
+class SecondScreenState extends State<SecondScreen>{
 
   double width = 50;
   double heigth = 50;
@@ -33,7 +33,7 @@ class HomeScreenState extends State<HomeScreen>{
       body: Center(
         child: GestureDetector(
           onTap: (){
-            Navigator.pushNamed(context,"Second");
+            Navigator.pop(context);
           },
             child: AnimatedContainer(
             width: width,
