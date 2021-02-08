@@ -32,6 +32,9 @@ class SecondScreenState extends State<SecondScreen>{
       ),
       body: Center(
         child: GestureDetector(
+          onLongPress: (){
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text("Hola")));
+          },
           onTap: (){
             Navigator.pop(context);
           },
